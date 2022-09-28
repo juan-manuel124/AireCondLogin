@@ -1,0 +1,74 @@
+@page
+@model AiresAcondDomi.Pages_Cliente.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cliente.Direccion" class="control-label"></label>
+                <input asp-for="Cliente.Direccion" class="form-control" />
+                <span asp-validation-for="Cliente.Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.Longitud" class="control-label"></label>
+                <input asp-for="Cliente.Longitud" class="form-control" />
+                <span asp-validation-for="Cliente.Longitud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.Latitud" class="control-label"></label>
+                <input asp-for="Cliente.Latitud" class="form-control" />
+                <span asp-validation-for="Cliente.Latitud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.Ciudad" class="control-label"></label>
+                <input asp-for="Cliente.Ciudad" class="form-control" />
+                <span asp-validation-for="Cliente.Ciudad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.FechaHora" class="control-label"></label>
+                <input asp-for="Cliente.FechaHora" class="form-control" />
+                <span asp-validation-for="Cliente.FechaHora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.Nombre" class="control-label"></label>
+                <input asp-for="Cliente.Nombre" class="form-control" />
+                <span asp-validation-for="Cliente.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.Apellido" class="control-label"></label>
+                <input asp-for="Cliente.Apellido" class="form-control" />
+                <span asp-validation-for="Cliente.Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.NumeroTelefono" class="control-label"></label>
+                <input asp-for="Cliente.NumeroTelefono" class="form-control" />
+                <span asp-validation-for="Cliente.NumeroTelefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cliente.TipoCliente" class="control-label"></label>
+                <select asp-for="Cliente.TipoCliente" class="form-control"></select>
+                <span asp-validation-for="Cliente.TipoCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
